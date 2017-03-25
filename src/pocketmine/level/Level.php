@@ -414,6 +414,10 @@ class Level implements ChunkManager, Metadatable{
 	public function setDimension(int $dimension){
 		$this->dimension = $dimension;
 	}
+        
+        public function getWeatherManager() {
+            return $this->weather = new \pocketmine\level\weather\Weather($this, 0);
+        }
 
 	public function getDimension() : int{
 		return $this->dimension;
